@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium futuristic portfolio of Rathan Raj M - Data Analyst, Full Stack Developer, and Machine Learning Enthusiast.">
+  <title>Rathan Raj M | Futuristic Portfolio</title>
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+  
+  <!-- Interactive Cursor follower -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-glow"></div>
+
+  <!-- Background canvas for floating pink particles -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="aurora-glow"></div>
+  <div class="digital-grid"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <span>PUTTU</span>
+      <span class="dot">.</span>
+    </div>
+    <nav class="desktop-nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <i data-lucide="menu"></i>
+    </button>
+  </header>
+
+  <!-- Mobile navigation drawer -->
+  <div class="mobile-nav-drawer">
+    <button class="close-drawer">
+      <i data-lucide="x"></i>
+    </button>
+    <nav class="mobile-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- MAIN PORTFOLIO -->
+  <main>
+    
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="greeting">HELLO, I'M</span>
+          <h1 class="hero-name">RATHAN RAJ M</h1>
+          <div class="typing-container">
+            <span class="static-txt">Creative</span>
+            <span class="dynamic-txt"></span>
+          </div>
+          <p class="hero-summary">
+            Passionate about Data Analytics, Machine Learning, and Full Stack Development. I enjoy building intelligent web applications, extracting insights from data, and developing scalable software solutions.
+          </p>
+          <div class="hero-buttons">
+            <a href="#resume" class="btn btn-primary ripple-btn">
+              <i data-lucide="eye"></i> View Resume
+            </a>
+            <a href="/resume/RR_Resume.pdf" download="RR_Resume.pdf" class="btn btn-outline ripple-btn">
+              <i data-lucide="download"></i> Download Resume
+            </a>
+            <a href="#certificates" class="btn btn-outline ripple-btn">
+              <i data-lucide="award"></i> View Certificates
+            </a>
+            <a href="#contact" class="btn btn-pink ripple-btn">
+              <i data-lucide="mail"></i> Contact Me
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo-wrapper">
+          <div class="photo-card-frame tilt-element">
+            <div class="rotating-border"></div>
+            <div class="glass-card-inner">
+              <img src="/images/profile.jpg" alt="Rathan Raj M Profile Photo" class="profile-photo">
+              <div class="photo-overlay"></div>
+              <div class="shine-effect"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="scroll-reveal">
+      <div class="section-header">
+        <span class="section-tag">// 01. BIO</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card">
+          <h3>Personal Narrative</h3>
+          <p>
+            I am an ambitious tech professional with a multi-disciplinary approach to software engineering and data science. My mindset bridges the gap between structured backend systems, clean user interfaces, and the analytical depth of predictive machine learning models.
+          </p>
+          <p>
+            I enjoy decoding complicated data patterns and translating them into visual tools that businesses can act upon. My codebases leverage modular designs, clear APIs, and scalable databases.
+          </p>
+        </div>
+        <div class="about-details glass-card">
+          <h3>Core Competencies</h3>
+          <div class="comp-list">
+            <div class="comp-item">
+              <i data-lucide="binary" class="pink-icon"></i>
+              <div>
+                <h4>Machine Learning</h4>
+                <p>Data preprocessing, prediction pipelines, classification & clustering algorithms.</p>
+              </div>
+            </div>
+            <div class="comp-item">
+              <i data-lucide="layers" class="pink-icon"></i>
+              <div>
+                <h4>Full Stack Engineering</h4>
+                <p>Scalable web backends, responsive Single Page Applications, and database design.</p>
+              </div>
+            </div>
+            <div class="comp-item">
+              <i data-lucide="bar-chart-3" class="pink-icon"></i>
+              <div>
+                <h4>Data Analytics</h4>
+                <p>SQL query optimization, data cleaning, ETL, and interactive dashboards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="scroll-reveal">
+      <div class="section-header">
+        <span class="section-tag">// 02. TECHNOLOGY</span>
+        <h2 class="section-title">Technical Expertise</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-pill tilt-element" data-skill="Python"><i data-lucide="terminal"></i> Python</div>
+        <div class="skill-pill tilt-element" data-skill="Java"><i data-lucide="coffee"></i> Java</div>
+        <div class="skill-pill tilt-element" data-skill="SQL"><i data-lucide="database"></i> SQL</div>
+        <div class="skill-pill tilt-element" data-skill="HTML"><i data-lucide="code-2"></i> HTML5</div>
+        <div class="skill-pill tilt-element" data-skill="CSS"><i data-lucide="palette"></i> CSS3</div>
+        <div class="skill-pill tilt-element" data-skill="JavaScript"><i data-lucide="braces"></i> JavaScript</div>
+        <div class="skill-pill tilt-element" data-skill="Node.js"><i data-lucide="server"></i> Node.js</div>
+        <div class="skill-pill tilt-element" data-skill="Express.js"><i data-lucide="cpu"></i> Express.js</div>
+        <div class="skill-pill tilt-element" data-skill="MongoDB"><i data-lucide="leaf"></i> MongoDB</div>
+        <div class="skill-pill tilt-element" data-skill="MySQL"><i data-lucide="database"></i> MySQL</div>
+        <div class="skill-pill tilt-element" data-skill="Pandas"><i data-lucide="table"></i> Pandas</div>
+        <div class="skill-pill tilt-element" data-skill="NumPy"><i data-lucide="percent"></i> NumPy</div>
+        <div class="skill-pill tilt-element" data-skill="Machine Learning"><i data-lucide="brain"></i> Machine Learning</div>
+        <div class="skill-pill tilt-element" data-skill="Git"><i data-lucide="git-branch"></i> Git</div>
+        <div class="skill-pill tilt-element" data-skill="Power BI"><i data-lucide="bar-chart-2"></i> Power BI</div>
+        <div class="skill-pill tilt-element" data-skill="REST API"><i data-lucide="network"></i> REST API</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="scroll-reveal">
+      <div class="section-header">
+        <span class="section-tag">// 03. CASE STUDIES</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-container">
+        
+        <!-- Project 1 -->
+        <div class="project-card glass-card tilt-element">
+          <div class="project-image-wrapper">
+            <div class="project-neon-backdrop"></div>
+            <div class="project-image-placeholder">
+              <i data-lucide="sprout" class="project-icon"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">AgriSense</h3>
+            <span class="project-subtitle">Crop Yield Prediction & Optimization</span>
+            <p class="project-desc">
+              An intelligent ML-driven platform that processes soil metrics, climate readings, and past yield tables to forecast optimal crop matchings. Helps farmers make data-backed irrigation decisions.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Pandas</span>
+              <span>Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="http://github.com/Rathanraj26/FULL-STACK-PROJECT" target="_blank" class="btn-project-link"><i data-lucide="github"></i> Code</a>
+              <a href="#" class="btn-project-link"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card tilt-element">
+          <div class="project-image-wrapper">
+            <div class="project-neon-backdrop"></div>
+            <div class="project-image-placeholder">
+              <i data-lucide="instagram" class="project-icon"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Instagram Data Analytics Dashboard</h3>
+            <span class="project-subtitle">Metrics Visualization & Engagement Analysis</span>
+            <p class="project-desc">
+              A premium data analytics dashboard that displays reach, impressions, audience demographic shifts, and content performance indicators using elegant interactive chart layouts.
+            </p>
+            <div class="project-tech">
+              <span>SQL</span>
+              <span>Power BI</span>
+              <span>Python</span>
+              <span>FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rathanraj26/DATA-SCIENCE-PROJECT-USING-JUPYTER-NOTEBOOK" target="_blank" class="btn-project-link"><i data-lucide="github"></i> Code</a>
+              <a href="#" class="btn-project-link"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3
+        <div class="project-card glass-card tilt-element">
+          <div class="project-image-wrapper">
+            <div class="project-neon-backdrop"></div>
+            <div class="project-image-placeholder">
+              <i data-lucide="globe" class="project-icon"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Full Stack Web Applications</h3>
+            <span class="project-subtitle">Modern Responsive Software Architectures</span>
+            <p class="project-desc">
+              A portfolio of robust, database-driven applications utilizing secure authentication layers, RESTful service patterns, real-time synchronization, and state management.
+            </p>
+            <div class="project-tech">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>MongoDB</span>
+              <span>JS ES6</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="btn-project-link"><i data-lucide="github"></i> Code</a>
+              <a href="#" class="btn-project-link"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume" class="scroll-reveal">
+      <div class="section-header">
+        <span class="section-tag">// 04. CREDENTIALS</span>
+        <h2 class="section-title">Interactive Resume</h2>
+      </div>
+      
+      <div class="resume-viewer-container glass-card">
+        <div class="resume-toolbar">
+          <div class="toolbar-left">
+            <button id="resume-prev" class="toolbar-btn"><i data-lucide="chevron-left"></i></button>
+            <span class="page-indicator">Page <span id="resume-page-num">1</span> of <span id="resume-page-count">-</span></span>
+            <button id="resume-next" class="toolbar-btn"><i data-lucide="chevron-right"></i></button>
+          </div>
+          <div class="toolbar-center">
+            <button id="resume-zoom-out" class="toolbar-btn"><i data-lucide="minus"></i></button>
+            <span id="resume-zoom-val" class="zoom-value">100%</span>
+            <button id="resume-zoom-in" class="toolbar-btn"><i data-lucide="plus"></i></button>
+          </div>
+          <div class="toolbar-right">
+            <button id="resume-fullscreen" class="toolbar-btn" title="Fullscreen"><i data-lucide="maximize-2"></i></button>
+            <button id="resume-print" class="toolbar-btn" title="Print"><i data-lucide="printer"></i></button>
+            <a href="/resume/RR_Resume.pdf" download="RR_Resume.pdf" class="toolbar-btn download-link-btn" title="Download"><i data-lucide="download"></i></a>
+          </div>
+        </div>
+        <div class="pdf-canvas-wrapper">
+          <div id="pdf-loading" class="pdf-loader">
+            <div class="loader-spinner"></div>
+            <span>Parsing document...</span>
+          </div>
+          <canvas id="resume-pdf-canvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="scroll-reveal">
+      <div class="section-header">
+        <span class="section-tag">// 05. VALIDATION</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+      <div class="certificates-grid" id="certificates-container">
+        <!-- Dynamically loaded via api -->
+        <div class="loading-placeholder">Reading certifications...</div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="scroll-reveal">
+      <div class="section-header">
+        <span class="section-tag">// 06. TIMELINE</span>
+        <h2 class="section-title">Professional Journey</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2026 - Present</span>
+            <h3>Full Stack Developer</h3>
+            <span class="timeline-location">Self-Directed & Client Projects</span>
+            <p>Creating interactive custom applications, data parsing systems, and machine learning pipelines. Gaining practical validation through modern engineering structures.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2025 - 2026</span>
+            <h3>Data Analytics</h3>
+            <span class="timeline-location">Specialization Coursework</span>
+            <p>Focused on relational databases, performance tuning, data reporting dashboards (Power BI/Excel), and scientific analytics pipelines (Pandas/NumPy).</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2023 - Present</span>
+            <h3>Education</h3>
+            <span class="timeline-location">Computer Science & Engineering</span>
+            <p>CGPA:8.44</p>
+            <P>K.S.Rangasamy College of Technology,Tiruchengode</P>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="scroll-reveal">
+      <div class="section-header">
+        <span class="section-tag">// 07. INTERACTION</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info glass-card">
+          <h3>Contact Details</h3>
+          <p>Let's collaborate on data-centric apps, scalable platforms, or advanced machine learning research.</p>
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <i data-lucide="mail"></i>
+              <div>
+                <span>Email Address</span>
+                <a href="mailto:rathanmrathanraj@gmail.com">rathanmrathanraj@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <i data-lucide="phone"></i>
+              <div>
+                <span>Phone Number</span>
+                <a href="tel:+916383235403">+91 63832 35403</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <i data-lucide="map-pin"></i>
+              <div>
+                <span>Location</span>
+                <span>kundumaranapalli, Tamil Nadu, India</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-action-container">
+            <a href="https://maps.app.goo.gl/3hHCrsmZUhyQRaRLA" target="_blank" class="btn btn-outline map-btn ripple-btn">
+              <i data-lucide="map"></i> View on Google Maps
+            </a>
+          </div>
+        </div>
+        
+        <form class="contact-form glass-card" id="portfolio-contact-form">
+          <h3>Send Message</h3>
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email Address" required>
+            <label for="email">Your Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" placeholder="Subject" required>
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary ripple-btn form-submit-btn">
+            <i data-lucide="send"></i> Dispatch Message
+          </button>
+          <div class="form-status-msg" id="form-status"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="glass-card">
+    <div class="footer-content">
+      <div class="footer-branding">
+        <span>RATHAN RAJ M</span>
+        <p>Data Analyst | Full Stack Developer | ML Enthusiast</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Rathanraj26" target="_blank" class="social-icon-btn"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/rathan-raj-m-204497292/" target="_blank" class="social-icon-btn"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:rathanmrathanraj@gmail.com" class="social-icon-btn"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026. Designed & Developed by Rathan Raj M</span>
+      <button class="back-to-top" id="to-top-btn"><i data-lucide="arrow-up"></i> Top</button>
+    </div>
+  </footer>
+
+  <!-- PDF MODAL FOR FULLSCREEN PREVIEW -->
+  <div id="pdf-modal" class="modal-backdrop">
+    <div class="modal-card glass-card">
+      <div class="modal-header">
+        <h3 id="modal-pdf-title">Certificate Preview</h3>
+        <button class="close-modal-btn"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-toolbar">
+        <button id="modal-prev" class="toolbar-btn"><i data-lucide="chevron-left"></i></button>
+        <span class="page-indicator">Page <span id="modal-page-num">1</span> of <span id="modal-page-count">-</span></span>
+        <button id="modal-next" class="toolbar-btn"><i data-lucide="chevron-right"></i></button>
+        <span class="toolbar-separator">|</span>
+        <button id="modal-zoom-out" class="toolbar-btn"><i data-lucide="minus"></i></button>
+        <span id="modal-zoom-val" class="zoom-value">100%</span>
+        <button id="modal-zoom-in" class="toolbar-btn"><i data-lucide="plus"></i></button>
+        <span class="toolbar-separator">|</span>
+        <a href="#" id="modal-download" download class="toolbar-btn" title="Download"><i data-lucide="download"></i></a>
+      </div>
+      <div class="modal-pdf-wrapper">
+        <div id="modal-pdf-loading" class="pdf-loader">
+          <div class="loader-spinner"></div>
+          <span>Rendering certificate...</span>
+        </div>
+        <canvas id="modal-pdf-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
